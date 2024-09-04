@@ -1,3 +1,8 @@
+import { nomesPaises, bandeirasPaises } from "/assets/BandeirasNome.js";
+window.carregarConteudo = carregarConteudo;
+window.sugerir = sugerir;
+window.carregarDetalhesPartida = carregarDetalhesPartida;
+
 async function carregarConteudo(urlPage, urlScript) {
   fetch(urlPage)
     .then((resposta) => {
@@ -451,6 +456,7 @@ async function exibirPopup() {
   popup.style.display = "block";
 }
 
+/*
 const nomesPaises = {
   Qatar: "Catar",
   Ecuador: "Equador",
@@ -520,3 +526,4 @@ const bandeirasPaises = {
   URU: "https://flagcdn.com/w320/uy.png",
   KOR: "https://flagcdn.com/w320/kr.png",
 };
+*/
