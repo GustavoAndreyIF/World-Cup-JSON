@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copa do Mundo 2022</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <h1 class="menu">QataStatistics</h1>
+      <a
+        href="#"
+        onclick="carregarConteudo('../World Cup JSON API/index.html', 
+		'../World Cup JSON API/js/main.js')"
+      >
+        Inicio</a
+      >
+      <a
+        href="#"
+        onclick="carregarConteudo('../World Cup JSON API/pages/faseDeGrupos.html',
+		 '../World Cup JSON API/js/faseDeGrupos.js')"
+      >
+        Fase de Grupos</a
+      >
+      <a
+        href="#"
+        onclick="carregarConteudo('../World Cup JSON API/pages/eliminatorias.html', 
+		'../World Cup JSON API/js/eliminatorias.js')"
+      >
+        Eliminatorias</a
+      >
+
+      <input
+        type="text"
+        id="barraPesquisa"
+        oninput="sugerir(this.value)"
+        onkeypress="if (event.key === 'Enter') pesquisar();"
+        autocomplete="off"
+      />
+      <div id="sugestoesContainer"></div>
+    </nav>
+    <header></header>
+    <main id="conteudoPagina"></main>
+    <script src="../World Cup JSON API/js/main.js"></script>
+  </body>
+</html>
