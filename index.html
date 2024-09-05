@@ -8,39 +8,15 @@
   <body>
     <nav class="menu">
       <h1 class="menu">QataStatistics</h1>
-      <a
-        href="#"
-        onclick="carregarConteudo('../index.html', 
-		'../js/main.js')"
-      >
-        Inicio</a
-      >
-      <a
-        href="#"
-        onclick="carregarConteudo('../pages/faseDeGrupos.html',
-		 '../js/faseDeGrupos.js')"
-      >
-        Fase de Grupos</a
-      >
-      <a
-        href="#"
-        onclick="carregarConteudo('../pages/eliminatorias.html', 
-		'../js/eliminatorias.js')"
-      >
-        Eliminatorias</a
-      >
+      <a>Inicio</a>
+      <a>Fase de Grupos</a>
+      <a>Eliminatorias</a>
 
-      <input
-        type="text"
-        id="barraPesquisa"
-        oninput="sugerir(this.value)"
-        onkeypress="if (event.key === 'Enter') pesquisar();"
-        autocomplete="off"
-      />
+      <input type="text" id="barraPesquisa" autocomplete="off" />
       <div id="sugestoesContainer"></div>
     </nav>
     <header></header>
     <main id="conteudoPagina"></main>
-    <script type="module" src="../js/main.js" defer></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
