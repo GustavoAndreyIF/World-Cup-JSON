@@ -169,7 +169,7 @@ export function encontrarTime(termoPesquisa, nomesPaises) {
 
 export function selecionarDataPesquisa(partidas) {
   const divPartidas = document.querySelector("#partidasFiltro");
-  const nav = document.querySelector("nav");
+  const nav = document.querySelector("#selectDiv");
   let selectDatas = document.getElementById("selectDatas");
 
   if (selectDatas) {

@@ -43,7 +43,7 @@ if (barraPesquisa) {
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("nav a:nth-of-type(1)").onclick = () =>
-    carregarConteudo("inicio.html");
+    carregarConteudo("../pages/inicio.html");
   document.querySelector("nav a:nth-of-type(2)").onclick = async () => {
     await carregarConteudo("../pages/faseDeGrupos.html");
     exibirGrupos();

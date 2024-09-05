@@ -39,7 +39,7 @@ export function exibirPartidas(dataFiltro = null) {
 }
 
 export function selecionarData() {
-  const nav = document.querySelector("nav");
+  const nav = document.querySelector("#selectDiv");
   const selectAntigo = document.getElementById("selectDatas");
   if (selectAntigo) {
     nav.removeChild(selectAntigo);
