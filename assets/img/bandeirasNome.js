@@ -1,3 +1,4 @@
+// objeto com nome dos paises em portugues
 export const nomesPaises = {
   Qatar: "Catar",
   Ecuador: "Equador",
@@ -33,6 +34,7 @@ export const nomesPaises = {
   Korea: "Coreia do Sul",
 };
 
+// url das bandeiras dos paises
 export const bandeirasPaises = {
   QAT: "https://flagcdn.com/w320/qa.png",
   ECU: "https://flagcdn.com/w320/ec.png",
