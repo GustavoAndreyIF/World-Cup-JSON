@@ -41,9 +41,19 @@ if (barraPesquisa) {
   };
 }
 
+function removeSelect(){
+  const nav = document.querySelector("#selectDiv");
+  const selectAntigo = document.getElementById("selectDatas");
+  if (selectAntigo) {
+    nav.removeChild(selectAntigo);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("nav a:nth-of-type(1)").onclick = () =>
+  document.querySelector("nav a:nth-of-type(1)").onclick = () => {
     carregarConteudo("../pages/inicio.html");
+    removeSelect()
+  }
   document.querySelector("nav a:nth-of-type(2)").onclick = async () => {
     await carregarConteudo("../pages/faseDeGrupos.html");
     exibirGrupos();

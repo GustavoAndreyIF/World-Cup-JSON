@@ -66,7 +66,7 @@ export async function exibirGrupos() {
     sessaoGrupo.appendChild(tabela);
     container.appendChild(sessaoGrupo);
   });
-  const nav = document.querySelector("nav");
+  const nav = document.querySelector("#selectDiv");
   const selectAntigo = document.getElementById("selectDatas");
   if (selectAntigo) {
     nav.removeChild(selectAntigo);
