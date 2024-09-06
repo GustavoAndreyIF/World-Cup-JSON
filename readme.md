@@ -4,68 +4,41 @@
 
    - [Objetivo](#objetivo)
    - [Explicação do Código](#explicação-do-código)
-     - [Importação de Módulos e Funções](#importação-de-módulos-e-funções)
-     - [Configuração Global](#configuração-global)
-     - [Verificação e Carregamento de Dados](#verificação-e-carregamento-de-dados)
-     - [Função para Carregar Conteúdo](#função-para-carregar-conteúdo)
-     - [Configuração da Barra de Pesquisa](#configuração-da-barra-de-pesquisa)
-     - [Função para Remover Elementos](#função-para-remover-elementos)
-     - [Configuração dos Links de Navegação](#configuração-dos-links-de-navegação)
    - [Conclusão](#conclusão)
 
 2. [Explicação do Código - utils/detalhesPartidas.js](#explicação-do-código---utilsdetalhespartidasjs)
 
    - [Objetivo](#objetivo-1)
    - [Explicação do Código](#explicação-do-código-1)
-     - [Importação de Módulos e Funções](#importação-de-módulos-e-funções-1)
-     - [Função `carregarDetalhesPartida`](#função-carregardetalhespartida)
-     - [Função `carregarPopup`](#função-carregarpopup)
-     - [Função `exibirPopup`](#função-exibirpopup)
-     - [Função `fecharPopup`](#função-fecharpopup)
    - [Conclusão](#conclusão-1)
 
 3. [Explicação do Código - utils/criarCard.js](#explicação-do-código---utilscriarcardjs)
 
    - [Objetivo](#objetivo-2)
    - [Explicação do Código](#explicação-do-código-2)
-     - [Importação de Módulos](#importação-de-módulos)
-     - [Função `criarCard`](#função-criarcard)
    - [Conclusão](#conclusão-2)
 
 4. [Explicação do Código - utils/barraPesquisa.js](#explicação-do-código---utilsbarra-pesquisajs)
 
    - [Objetivo](#objetivo-3)
    - [Explicação do Código](#explicação-do-código-3)
-     - [Importação de Módulos e Funções](#importação-de-módulos-e-funções-2)
-     - [Função `sugerir(termoPesquisa)`](#função-sugerirtermopesquisa)
-     - [Função `mostrarSugestoes(sugestoes)`](#função-mostrarsugestoessugestoes)
-     - [Função `pesquisar()`](#função-pesquisar)
-     - [Função `encontrarTime(termoPesquisa, nomesPaises)`](#função-encontrartimetermopesquisa-nomespaises)
-     - [Função `selecionarDataPesquisa(partidas)`](#função-selecionardatapresequisa-partidas)
-     - [Função `exibirPartidasNoMain(partidas)`](#função-exibirpartidasnomainpartidas)
    - [Conclusão](#conclusão-3)
 
 5. [Explicação do Código - services/apiData.js](#explicação-do-código---servicesapiDatajs)
 
    - [Objetivo](#objetivo-4)
    - [Explicação do Código](#explicação-do-código-4)
-     - [Função `fetchData`](#função-fetchdata)
    - [Conclusão](#conclusão-4)
 
 6. [Explicação do Código - assts/js/faseDeGrupos.js](#explicação-do-código---asstsjsfaseDeGruposjs)
 
    - [Objetivo](#objetivo-5)
    - [Explicação do Código](#explicação-do-código-5)
-     - [Importação de Módulos](#importação-de-módulos-1)
-     - [Função `exibirGrupos`](#função-exibirgrupos)
    - [Conclusão](#conclusão-5)
 
 7. [Explicação do Código - assets/js/eliminatorias.js](#explicação-do-código---assetsjseliminatoriasjs)
    - [Objetivo](#objetivo-6)
    - [Explicação do Código](#explicação-do-código-6)
-     - [Importação de Módulos](#importação-de-módulos-2)
-     - [Função `exibirPartidas(dataFiltro = null)`](#função-exibirpartidasdatafiltro--null)
-     - [Função `selecionarData()`](#função-selecionardata)
    - [Conclusão](#conclusão-6)
 
 # Respostas às Questões Utilizando a Explicação do Código
@@ -89,7 +62,6 @@ A tabela de classificação dos grupos é exibida pela função `exibirGrupos` d
 ## 5. Como o código faz a requisição para a API e exibe o resultado final da Copa do Mundo, incluindo o campeão e o vice-campeão?
 
 O resultado final da Copa do Mundo, incluindo o campeão e o vice-campeão, pode ser exibido pela função `exibirPartidas` do arquivo `assets/js/eliminatorias.js`. Esta função exibe as partidas da fase de eliminatórias e pode ser ajustada para mostrar as partidas finais. Para obter o campeão e o vice-campeão, a função poderia filtrar as partidas da final e processar os resultados para determinar os vencedores. As informações são obtidas a partir do `localStorage` ou diretamente da API, conforme necessário.
-
 
 # Explicação do Código - main.js
 
