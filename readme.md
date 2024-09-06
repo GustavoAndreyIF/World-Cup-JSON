@@ -68,6 +68,29 @@
      - [Função `selecionarData()`](#função-selecionardata)
    - [Conclusão](#conclusão-6)
 
+# Respostas às Questões Utilizando a Explicação do Código
+
+## 1. Como o código faz a requisição para a API e exibe todos os jogos de uma data específica?
+
+O código usa a função `fetchData` do arquivo `services/apiData.js` para buscar dados de partidas da API. Para exibir todos os jogos de uma data específica, o código poderia usar a função `exibirPartidas` do arquivo `assets/js/eliminatorias.js`. Esta função permite filtrar as partidas por data ao passar um parâmetro `dataFiltro`. Ela obtém todas as partidas armazenadas ou faz uma requisição para buscar novas partidas e, em seguida, filtra as partidas com base na data fornecida.
+
+## 2. Como o código faz a requisição para a API e exibe os detalhes de um jogo específico?
+
+A função `carregarDetalhesPartida` do arquivo `utils/detalhesPartidas.js` é responsável por buscar os detalhes de uma partida específica. Ela utiliza o `partidaId` para construir a URL da API, faz uma requisição para obter os detalhes da partida e, se a resposta for bem-sucedida, armazena as informações no `localStorage`. Em seguida, chama a função `carregarPopup` para exibir os detalhes da partida no popup.
+
+## 3. Como o código faz a requisição para a API e exibe todos os jogos de uma equipe específica?
+
+Para exibir todos os jogos de uma equipe específica, o código usa a função `pesquisar` do arquivo `utils/barraPesquisa.js`. Esta função faz uma busca pelo termo de pesquisa inserido pelo usuário, filtra os times e as partidas armazenadas no `localStorage`, e exibe os resultados filtrados, que incluem os jogos da equipe específica. A função também utiliza a função `encontrarTime` para localizar o time correspondente ao termo de pesquisa.
+
+## 4. Como o código faz a requisição para a API e exibe uma tabela de classificação dos grupos da Copa do Mundo?
+
+A tabela de classificação dos grupos é exibida pela função `exibirGrupos` do arquivo `assts/js/faseDeGrupos.js`. Esta função obtém os dados dos grupos de times, ordena os times com base em suas estatísticas e cria tabelas HTML para exibir as informações. A função limpa o container de grupos, cria uma tabela para cada grupo, e adiciona as seções das tabelas ao container principal.
+
+## 5. Como o código faz a requisição para a API e exibe o resultado final da Copa do Mundo, incluindo o campeão e o vice-campeão?
+
+O resultado final da Copa do Mundo, incluindo o campeão e o vice-campeão, pode ser exibido pela função `exibirPartidas` do arquivo `assets/js/eliminatorias.js`. Esta função exibe as partidas da fase de eliminatórias e pode ser ajustada para mostrar as partidas finais. Para obter o campeão e o vice-campeão, a função poderia filtrar as partidas da final e processar os resultados para determinar os vencedores. As informações são obtidas a partir do `localStorage` ou diretamente da API, conforme necessário.
+
+
 # Explicação do Código - main.js
 
 ## Objetivo
