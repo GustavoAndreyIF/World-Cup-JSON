@@ -70,17 +70,18 @@ function removeSelect() {
 // Adiciona um ouvinte de evento para quando o conteúdo da página estiver completamente carregado
 document.addEventListener("DOMContentLoaded", () => {
   // Configura o clique do primeiro link de navegação para carregar a página "inicio.html" e remover o elemento de seleção
-  document.querySelector("nav a:nth-of-type(1)").onclick = () => {
+  document.querySelector(".menu-title a").onclick = (event) => {
     carregarConteudo("../pages/inicio.html");
     removeSelect();
   };
+
   // Configura o clique do segundo link de navegação para carregar a página "faseDeGrupos.html" e exibir os grupos
-  document.querySelector("nav a:nth-of-type(2)").onclick = async () => {
+  document.querySelector(".btn-nav a:nth-of-type(1)").onclick = async () => {
     await carregarConteudo("../pages/faseDeGrupos.html");
     exibirGrupos();
   };
   // Configura o clique do terceiro link de navegação para carregar a página "eliminatorias.html", exibir as partidas e selecionar a data
-  document.querySelector("nav a:nth-of-type(3)").onclick = async () => {
+  document.querySelector(".btn-nav a:nth-of-type(2)").onclick = async () => {
     await carregarConteudo("../pages/eliminatorias.html");
     exibirPartidas();
     selecionarData();

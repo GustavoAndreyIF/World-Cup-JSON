@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav class="menu">
-      <h1 class="menu-title">QatarStatistics</h1>
+      <h1 class="menu-title"><a href="#">QatarStatistics</a></h1>
       <div id="selectDiv" class="selectDiv">
         <input
           type="text"
@@ -20,7 +20,6 @@
       </div>
 
       <div class="btn-nav">
-        <a href="#" class="menu-link">Início</a>
         <a href="#" class="menu-link">Fase de Grupos</a>
         <a href="#" class="menu-link">Eliminatórias</a>
       </div>
@@ -30,47 +29,47 @@
     <header></header>
 
     <main id="conteudoPagina">
-      <section>
-        <h2>Funcionalidades do Site</h2>
-        <p>
-          Este site oferece várias ferramentas para explorar os dados da Copa do
-          Mundo de 2022, incluindo:
-        </p>
-        <ul>
-          <li>
-            Visualização completa da tabela de grupos com classificação das
-            equipes.
-          </li>
-          <li>
-            Pesquisa de partidas por país e datas específicas, com todos os
-            detalhes das partidas.
-          </li>
-          <li>Exibição de estatísticas detalhadas das partidas</li>
-          <li>Filtragem interativa para encontrar informações rapidamente.</li>
-        </ul>
-        <p>
-          Todos os dados são fornecidos pela
-          <strong>API da Copa do Mundo</strong>, garantindo informações precisas
-          e atualizadas.
-        </p>
-      </section>
-
-      <section id="sobre">
-        <h2>Sobre o Projeto</h2>
-        <p>
-          Este site foi desenvolvido como parte de um trabalho prático da
-          disciplina de Programação Estruturada e Orientada a Objetos (PEOO). O
-          principal objetivo é aplicar conceitos de manipulação de objetos, JSON
-          e integração com APIs para construir aplicações web práticas e
-          interativas.
-        </p>
-        <p>
-          O projeto utiliza dados reais da API da Copa do Mundo para fornecer
-          uma experiência interativa ao usuário, permitindo a navegação e
-          pesquisa de informações de maneira dinâmica. Link para a API:
-          <a href="https://worldcupjson.net/">World Cup API</a>
-        </p>
-      </section>
+        <section class="site-features">
+          <h2 class="section-title">Funcionalidades do Site</h2>
+          <p class="section-description">
+            Este site oferece várias ferramentas para explorar os dados da Copa do
+            Mundo de 2022, incluindo:
+          </p>
+          <ul class="features-list">
+            <li class="feature-item">
+              Visualização completa da tabela de grupos com classificação das equipes.
+            </li>
+            <li class="feature-item">
+              Pesquisa de partidas por país e datas específicas, com todos os detalhes
+              das partidas.
+            </li>
+            <li class="feature-item">Exibição de estatísticas detalhadas das partidas.</li>
+            <li class="feature-item">
+              Filtragem interativa para encontrar informações rapidamente.
+            </li>
+          </ul>
+          <p class="section-description">
+            Todos os dados são fornecidos pela
+            <strong>API da Copa do Mundo</strong>, garantindo informações precisas e
+            atualizadas.
+          </p>
+        </section>
+      
+        <section class="about-project" id="sobre">
+          <h2 class="section-title">Sobre o Projeto</h2>
+          <p class="section-description">
+            Este site foi desenvolvido como parte de um trabalho prático da disciplina
+            de Programação Estruturada e Orientada a Objetos (PEOO). O principal
+            objetivo é aplicar conceitos de manipulação de objetos, JSON e integração
+            com APIs para construir aplicações web práticas e interativas.
+          </p>
+          <p class="section-description">
+            O projeto utiliza dados reais da API da Copa do Mundo para fornecer uma
+            experiência interativa ao usuário, permitindo a navegação e pesquisa de
+            informações de maneira dinâmica. Link para a API:
+            <a href="https://worldcupjson.net/" class="api-link">World Cup API</a>
+          </p>
+        </section>
     </main>
 
     <script type="module" src="main.js"></script>

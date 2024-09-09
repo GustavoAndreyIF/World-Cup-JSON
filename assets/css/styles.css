@@ -1,0 +1,309 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+/* Estilos do menu de navegação */
+nav.menu {
+  background-color: #8a1538; /* Cor do tema da Copa do Mundo no Catar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos do título com link */
+.menu-title {
+    font-size: 24px;
+    font-weight: bold;
+    flex: 1;
+  }
+  
+  .menu-title a {
+    color: #ffffff; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease;
+  }
+  
+  .menu-title a:hover {
+    color: #ffd700; /* Cor de destaque ao passar o mouse */
+  }
+  
+.selectDiv {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar::placeholder {
+  color: #ccc;
+}
+
+.btn-nav {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.menu-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: #660f2c; /* Cor mais escura para o hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav.menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu-title {
+    margin-bottom: 10px;
+  }
+
+  .selectDiv {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+/*-------------------------------------------------*/
+/* Estilo do container de sugestões */
+.suggestions {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 300px; /* Tamanho similar ao da barra de pesquisa */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Garante que o container fique sobreposto */
+  }
+  
+  .sugestao-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .sugestao-item:last-child {
+    border-bottom: none; /* Remove a borda inferior do último item */
+  }
+  
+  .sugestao-item:hover {
+    background-color: #f0f0f0;
+  }
+/*-----------------------------------------------------*/
+/* Estilos das seções */
+.site-features, .about-project {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos dos títulos das seções */
+  .section-title {
+    font-size: 24px;
+    color: #8a1538;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilos dos parágrafos */
+  .section-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilos da lista de funcionalidades */
+  .features-list {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .feature-item {
+    margin-bottom: 10px;
+  }
+  
+  /* Link da API */
+  .api-link {
+    color: #8a1538;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .api-link:hover {
+    text-decoration: underline;
+  }
+/*----------------------------------------------*/
+  /* Container de cada grupo */
+.sessaoGrupo {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ajusta a largura das divs */
+    max-width: 1200px; /* Define uma largura máxima para grandes telas */
+  }
+  
+  /* Título do grupo */
+  .tituloGrupo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #8a1538;
+  }
+  
+  /* Tabela dos grupos */
+  .tabela-grupos {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabela-grupos thead th {
+    background-color: #8a1538;
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .tabela-grupos tbody td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Centraliza o conteúdo das colunas */
+  .tabela-grupos .center {
+    text-align: center;
+  }
+  
+  /* Linha de times classificados */
+  .classificado {
+    background-color: #e6ffe6; /* Verde claro */
+  }
+  
+  /* Linha de times desclassificados */
+  .desclassificado {
+    background-color: #ffe6e6; /* Vermelho claro */
+  }
+  
+  /* Estilo da bandeira e nome do time */
+  .tabela-grupos tbody td img {
+    margin-right: 8px;
+  }
+  /*-------------------------------------------*/
+  /* Container principal das partidas */
+#partidasContainer {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Seção de cada fase do torneio */
+  .fase {
+    margin-bottom: 30px;
+  }
+  
+  /* Título da fase */
+  .fase h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8a1538;
+    margin-bottom: 15px;
+  }
+  
+  /* Container dos cartões de partidas */
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Estilo básico dos cartões de partidas */
+  .card {
+    flex: 1 1 calc(33.333% - 10px); /* Ajusta o tamanho do cartão */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para os elementos dentro do cartão */
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  /* Seletor de datas */
+  #selectDatas {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o seletor de datas na navegação */
+  #selectDiv {
+    margin: 10px auto;
+    text-align: center;
+  }
+  
+  /* Opcional: ajuste de fonte e padding para as opções do seletor */
+  #selectDatas option {
+    padding: 10px;
+  }
+  
