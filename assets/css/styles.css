@@ -1,43 +1,55 @@
+:root {
+  --corPrincipal: #570a2a;
+  --corDetalhe: #00b8a0;
+  --corDetalheNeutra: #2c2c2c;
+  --corBranca: #fffeff;
+  --corBackground: #1e1e1e;
+  --corDestaque: #121212;
+  --corDestalhe2: #a60e41;
+}
+
 /* Estilos gerais */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: var(--corBackground);
 }
 
 /* Estilos do menu de navegação */
 nav.menu {
-  background-color: #8a1538; /* Cor do tema da Copa do Mundo no Catar */
-  color: #ffffff;
+  background-color: var(
+    --corPrincipal
+  ); /* Cor do tema da Copa do Mundo no Catar */
+  color: var(--corBranca);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos do título com link */
 .menu-title {
-    font-size: 24px;
-    font-weight: bold;
-    flex: 1;
-  }
-  
-  .menu-title a {
-    color: #ffffff; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado */
-    transition: color 0.3s ease;
-  }
-  
-  .menu-title a:hover {
-    color: #ffd700; /* Cor de destaque ao passar o mouse */
-  }
-  
+  font-size: 24px;
+  font-weight: bold;
+  flex: 1;
+}
+
+.menu-title a {
+  color: var(--corBranca); /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  transition: color 0.3s ease;
+}
+
+.menu-title a:hover {
+  color: var(--corDetalhe); /* Cor de destaque ao passar o mouse */
+}
+
 .selectDiv {
   flex: 1;
   display: flex;
@@ -55,7 +67,7 @@ nav.menu {
 }
 
 .search-bar::placeholder {
-  color: #ccc;
+  color: var(--corDetalheNeutra);
 }
 
 .btn-nav {
@@ -66,7 +78,7 @@ nav.menu {
 }
 
 .menu-link {
-  color: #ffffff;
+  color: var(--corBranca);
   text-decoration: none;
   font-size: 16px;
   padding: 10px 15px;
@@ -75,7 +87,8 @@ nav.menu {
 }
 
 .menu-link:hover {
-  background-color: #660f2c; /* Cor mais escura para o hover */
+  color: var(--corDetalhe); /* Cor mais escura para o hover */
+  transition: color 0.3s ease;
 }
 
 /* Responsividade */
@@ -107,203 +120,278 @@ nav.menu {
 /*-------------------------------------------------*/
 /* Estilo do container de sugestões */
 .suggestions {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 300px; /* Tamanho similar ao da barra de pesquisa */
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Garante que o container fique sobreposto */
-  }
-  
-  .sugestao-item {
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .sugestao-item:last-child {
-    border-bottom: none; /* Remove a borda inferior do último item */
-  }
-  
-  .sugestao-item:hover {
-    background-color: #f0f0f0;
-  }
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 300px; /* Tamanho similar ao da barra de pesquisa */
+  background-color: var(--corBranca);
+  border: 1px solid var(--corDetalheNeutra);
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100; /* Garante que o container fique sobreposto */
+}
+
+.sugestao-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--corDetalheNeutra);
+  font-size: 16px;
+  color: var(--corDestaque);
+  transition: color 0.3s ease;
+}
+
+.sugestao-item:last-child {
+  border-bottom: none; /* Remove a borda inferior do último item */
+}
+
+.sugestao-item:hover {
+  background-color: var(--corDetalhe);
+}
 /*-----------------------------------------------------*/
 /* Estilos das seções */
-.site-features, .about-project {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilos dos títulos das seções */
-  .section-title {
-    font-size: 24px;
-    color: #8a1538;
-    margin-bottom: 15px;
-  }
-  
-  /* Estilos dos parágrafos */
-  .section-description {
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
-  
-  /* Estilos da lista de funcionalidades */
-  .features-list {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  
-  .feature-item {
-    margin-bottom: 10px;
-  }
-  
-  /* Link da API */
-  .api-link {
-    color: #8a1538;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .api-link:hover {
-    text-decoration: underline;
-  }
+.site-features,
+.about-project {
+  justify-content: center;
+  padding: 20px;
+  margin: 1%;
+  background-color: var(--corDestaque);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos dos títulos das seções */
+.section-title {
+  font-size: 24px;
+  color: var(--corDetalhe);
+  margin-bottom: 15px;
+}
+
+/* Estilos dos parágrafos */
+.section-description {
+  color: var(--corBranca);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Estilos da lista de funcionalidades */
+.features-list {
+  color: var(--corBranca);
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.feature-item {
+  margin-bottom: 10px;
+}
+
+/* Link da API */
+.api-link {
+  color: var(--corDetalhe);
+  font-weight: bold;
+}
+
+.api-link:hover {
+  color: var(--corBranca);
+  text-decoration: underline;
+}
 /*----------------------------------------------*/
-  /* Container de cada grupo */
+/* Estilo para o header da sessão do grupo */
+.grupoHeader {
+  background-color: var(--corPrincipal); /* Cor de fundo */
+  padding: 20px 0; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+  color: var(--corBranca); /* Cor do texto */
+}
+
+/* Estilo para o título dentro da sessão do grupo */
+.grupoHeader h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0; /* Remove margens */
+  text-transform: uppercase; /* Texto em maiúsculas */
+  letter-spacing: 2px; /* Espaçamento entre letras */
+}
+/* Container de cada grupo */
 .sessaoGrupo {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Ajusta a largura das divs */
-    max-width: 1200px; /* Define uma largura máxima para grandes telas */
-  }
-  
-  /* Título do grupo */
-  .tituloGrupo {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #8a1538;
-  }
-  
-  /* Tabela dos grupos */
-  .tabela-grupos {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .tabela-grupos thead th {
-    background-color: #8a1538;
-    color: #ffffff;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
-  .tabela-grupos tbody td {
-    padding: 8px;
-    border: 1px solid #ddd;
-  }
-  
-  /* Centraliza o conteúdo das colunas */
-  .tabela-grupos .center {
-    text-align: center;
-  }
-  
-  /* Linha de times classificados */
-  .classificado {
-    background-color: #e6ffe6; /* Verde claro */
-  }
-  
-  /* Linha de times desclassificados */
-  .desclassificado {
-    background-color: #ffe6e6; /* Vermelho claro */
-  }
-  
-  /* Estilo da bandeira e nome do time */
-  .tabela-grupos tbody td img {
-    margin-right: 8px;
-  }
-  /*-------------------------------------------*/
-  /* Container principal das partidas */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--corDestaque);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Ajusta a largura das divs */
+  max-width: 1200px; /* Define uma largura máxima para grandes telas */
+}
+
+/* Título do grupo */
+.tituloGrupo {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--corDetalhe);
+}
+
+/* Tabela dos grupos */
+.tabela-grupos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-grupos thead th {
+  background-color: var(--corPrincipal);
+  color: var(--corBranca);
+  padding: 10px;
+  border: 1px solid var(--corDetalheNeutra);
+}
+
+.tabela-grupos tbody td {
+  padding: 8px;
+  color: var(--corBranca);
+  border: 1px solid var(--corDetalheNeutra);
+}
+
+/* Centraliza o conteúdo das colunas */
+.tabela-grupos .center {
+  text-align: center;
+}
+
+/* Linha de times classificados */
+.classificado {
+  background-color: var(--corDetalhe); /* Verde claro */
+}
+
+/* Linha de times desclassificados */
+.desclassificado {
+  background-color: var(--corBackground); /* Vermelho claro */
+}
+
+/* Estilo da bandeira e nome do time */
+.tabela-grupos tbody td img {
+  margin-right: 8px;
+}
+/*-------------------------------------------*/
+/* Container principal das partidas */
+.eliminaHeader {
+  background-color: var(--corPrincipal); /* Cor de fundo */
+  padding: 20px 0; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+  color: var(--corBranca); /* Cor do texto */
+}
+
+/* Estilo para o título dentro da sessão do grupo */
+.eliminaHeader h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0; /* Remove margens */
+  text-transform: uppercase; /* Texto em maiúsculas */
+  letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
 #partidasContainer {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 1200px;
-  }
-  
-  /* Seção de cada fase do torneio */
-  .fase {
-    margin-bottom: 30px;
-  }
-  
-  /* Título da fase */
-  .fase h2 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #8a1538;
-    margin-bottom: 15px;
-  }
-  
-  /* Container dos cartões de partidas */
-  .cardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  /* Estilo básico dos cartões de partidas */
-  .card {
-    flex: 1 1 calc(33.333% - 10px); /* Ajusta o tamanho do cartão */
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilo para os elementos dentro do cartão */
-  .card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 14px;
-    margin: 5px 0;
-  }
-  
-  /* Seletor de datas */
-  #selectDatas {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-top: 10px;
-  }
-  
-  /* Estilo para o seletor de datas na navegação */
-  #selectDiv {
-    margin: 10px auto;
-    text-align: center;
-  }
-  
-  /* Opcional: ajuste de fonte e padding para as opções do seletor */
-  #selectDatas option {
-    padding: 10px;
-  }
-  
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--corDestaque);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+}
+
+/* Seção de cada fase do torneio */
+.fase {
+  margin-bottom: 30px;
+}
+
+/* Título da fase */
+.fase h2 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--corDetalhe);
+  margin-bottom: 15px;
+}
+
+/* Container dos cartões de partidas */
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Estilo básico dos cartões de partidas */
+.card {
+  color: var(--corBranca);
+  flex: 1 1 calc(25% - 10px); /* Ajusta o tamanho do cartão */
+  border: 1px solid var(--corDetalhe);
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os elementos dentro do cartão */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Estilo para a classe que alinha bandeiras e nomes dos times */
+.team {
+  display: flex; /* Exibe os itens em uma linha */
+  align-items: center; /* Centraliza verticalmente os itens */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  gap: 10px; /* Espaçamento entre os itens */
+  font-size: 16px; /* Define o tamanho da fonte */
+  margin-bottom: 10px; /* Espaço inferior para o resultado */
+}
+
+/* Estilo para as bandeiras */
+.team img {
+  width: 20px;
+  height: 15px;
+}
+
+/* Estilo para os nomes dos times */
+.team h3 {
+  margin: 0; /* Remove margem padrão */
+  font-weight: normal; /* Mantém o peso da fonte normal */
+}
+
+/* Estilo para o "vs" */
+.team h3:nth-child(3) {
+  font-weight: bold; /* Deixa o "vs" em negrito */
+  margin: 0 5px; /* Espaçamento lateral ao redor do "vs" */
+}
+
+/* Estilos para times ganhadores e perdedores */
+.ganhador {
+  color: var(--corDetalhe); /* Cor verde para o time vencedor */
+}
+
+.perdedor {
+  color: var(--corDestalhe2); /* Cor vermelha para o time perdedor */
+}
+
+/* Seletor de datas */
+#selectDatas {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--corBranca);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Estilo para o seletor de datas na navegação */
+#selectDiv {
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* Opcional: ajuste de fonte e padding para as opções do seletor */
+#selectDatas option {
+  padding: 10px;
+}
