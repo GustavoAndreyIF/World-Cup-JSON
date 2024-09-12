@@ -9,12 +9,12 @@ export function criarCard(partida) {
 
   // Obtém a URL da bandeira do time da casa a partir do objeto bandeirasPaises
   const bandeiraTime1 = bandeirasPaises[partida.home_team.country];
-  // Obtém a URL da bandeira do time visitante a partir do objeto bandeirasPaises
+  // Obtém a URL da bandeira do time visitante a partir do objeto bandeirasPaises 
   const bandeiraTime2 = bandeirasPaises[partida.away_team.country];
 
   // Define o conteúdo HTML do cartão usando template literals
   card.innerHTML = `
-      <div id="${partida.datetime}">
+      <div class="cards"id="${partida.datetime}">
           <div class="team">
               <!-- Exibe a bandeira do time da casa -->
               <img width="20" height="15" src="${bandeiraTime1}"/>
@@ -35,7 +35,7 @@ export function criarCard(partida) {
               <img width="20" height="15" src="${bandeiraTime2}">
           </div>
           <!-- Exibe o resultado da partida -->
-          <p>${partida.home_team.goals} - ${partida.away_team.goals}</p>
+          <h3>${partida.home_team.goals} - ${partida.away_team.goals}</h3>
           <h4>Estádio</h4>
           <!-- Exibe o nome do estádio e a localização -->
           <p>${partida.venue} - ${partida.location}</p>
@@ -45,7 +45,7 @@ export function criarCard(partida) {
     partida.datetime
   ).toLocaleTimeString()}</p>
           <!-- Botão que chama a função carregarDetalhesPartida com o id da partida quando clicado -->
-          <button onclick="carregarDetalhesPartida('${
+          <button class="detalhesBotao"onclick="carregarDetalhesPartida('${
             partida.id
           }')">Ver Detalhes</button>
       </div>

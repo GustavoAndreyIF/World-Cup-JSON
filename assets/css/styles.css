@@ -382,7 +382,7 @@ nav.menu {
   font-size: 16px;
   border: 1px solid var(--corBranca);
   border-radius: 4px;
-  margin-top: 10px;
+  margin-left: 10px;
 }
 
 /* Estilo para o seletor de datas na navegação */
@@ -394,4 +394,37 @@ nav.menu {
 /* Opcional: ajuste de fonte e padding para as opções do seletor */
 #selectDatas option {
   padding: 10px;
+}
+
+/* Estilo para o botão de detalhes */
+.detalhesBotao {
+  background-color: var(--corDestalhe2); /* Cor de fundo */
+  color: var(--corBranca); /* Cor do texto */
+  border: none; /* Remove a borda */
+  padding: 10px 20px; /* Adiciona preenchimento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Efeito suave de transição */
+}
+
+.detalhesBotao:hover {
+  background-color: var(
+    --corDetalhe
+  ); /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilo para os títulos h4 (Estádio, Data e Horário) */
+.cards h4 {
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  margin: 10px 0; /* Espaço em cima e embaixo */
+  color: var(--corBranca); /* Cor do texto */
+}
+
+/* Estilo para os parágrafos (Estádio, Local, Data, Horário) */
+.cards p {
+  font-size: 16px; /* Tamanho da fonte */
+  margin: 5px 0; /* Espaçamento menor entre parágrafos */
+  color: var(--corBranca); /* Cor do texto */
 }

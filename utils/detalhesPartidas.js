@@ -141,30 +141,44 @@ export async function exibirPopup() {
 				  <tr>
 					  <td>Posse de Bola (%)</td>
 					  <td>${
-              partida.home_team.possession
+              partida.home_team.possession !== undefined
+                ? partida.home_team.possession
+                : "-"
             }</td> <!-- Posse de bola do time da casa -->
 					  <td>${
-              partida.away_team.possession
+              partida.away_team.possession !== undefined
+                ? partida.away_team.possession
+                : "-"
             }</td> <!-- Posse de bola do time visitante -->
 				  </tr>
 				  <!-- Linha de chutes a gol -->
 				  <tr>
 					  <td>Chutes a Gol</td>
+					  <td>
+              ${
+                partida.home_team.shots_on_target !== undefined
+                  ? partida.home_team.shots_on_target
+                  : "-"
+              }
+            </td> <!-- Chutes a gol do time da casa -->
 					  <td>${
-              partida.home_team.shots_on_target
-            }</td> <!-- Chutes a gol do time da casa -->
-					  <td>${
-              partida.away_team.shots_on_target
+              partida.away_team.shots_on_target !== undefined
+                ? partida.away_team.shots_on_target
+                : "-"
             }</td> <!-- Chutes a gol do time visitante -->
 				  </tr>
 				  <!-- Linha de faltas -->
 				  <tr>
 					  <td>Faltas</td>
 					  <td>${
-              partida.home_team.fouls
+              partida.home_team.fouls !== undefined
+                ? partida.home_team.fouls
+                : "-"
             }</td> <!-- Faltas cometidas pelo time da casa -->
 					  <td>${
-              partida.away_team.fouls
+              partida.away_team.fouls !== undefined
+                ? partida.away_team.fouls
+                : "-"
             }</td> <!-- Faltas cometidas pelo time visitante -->
 				  </tr>
 				  <!-- Adicione mais estatísticas se disponíveis -->
