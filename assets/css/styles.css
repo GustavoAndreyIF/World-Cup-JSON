@@ -218,7 +218,6 @@ nav.menu {
   padding: 20px;
   background-color: var(--corDestaque);
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 80%; /* Ajusta a largura das divs */
   max-width: 1200px; /* Define uma largura máxima para grandes telas */
 }
@@ -293,7 +292,6 @@ nav.menu {
   padding: 20px;
   background-color: var(--corDestaque);
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 90%;
 }
 
@@ -325,7 +323,6 @@ nav.menu {
   border: 1px solid var(--corDetalhe);
   border-radius: 4px;
   padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para os elementos dentro do cartão */
