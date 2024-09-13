@@ -108,6 +108,7 @@ export function pesquisar() {
   // Se houver times filtrados, cria e exibe uma tabela com os times encontrados
   if (timesFiltrados.length > 0) {
     const tituloTimes = document.createElement("h2");
+    tituloTimes.classList.add("eliminaHeader");
     tituloTimes.textContent = "Time encontrado:";
     conteudoPagina.appendChild(tituloTimes);
 
@@ -180,6 +181,7 @@ export function pesquisar() {
   if (partidasFiltradas.length > 0) {
     selecionarDataPesquisa(partidasFiltradas);
     const tituloPartidas = document.createElement("h2");
+    tituloPartidas.classList.add("eliminaHeader");
     tituloPartidas.textContent = "Partidas encontradas:";
     const divPartidas = document.createElement("div");
     divPartidas.id = "partidasFiltro";
